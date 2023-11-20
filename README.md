@@ -5,6 +5,8 @@
 ## tail -f /var/log/my_install.log
 
 #!/bin/bash
+cd /var
+mkdir log
 exec > >(tee /var/log/my_install.log|logger -t user-data -s 2>/dev/console) 2>&1
 cd ~
 yum -y install wget unzip
