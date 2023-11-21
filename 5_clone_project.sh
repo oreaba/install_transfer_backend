@@ -2,9 +2,14 @@
 # read -p "step 5"
 
 echo "5.1 Cloning the project from bitbucket repository ..."
-mkdir -p /var/www/zakaa_backend/
 BITBUCKET_REPO="git@bitbucket.org:diamond-professional/zakaa_backend.git"
-git clone $BITBUCKET_SSH_URL /var/www/zakaa_backend/	# do not run this using sudo
+TARGET_DIRECTORY="/var/www/zakaa_backend/"
+
+# Create the target directory if it doesn't exist
+mkdir -p "$TARGET_DIRECTORY"
+
+# Clone the repository into the target directory
+git clone "$BITBUCKET_REPO" "$TARGET_DIRECTORY" # do not run this using sudo to be the owner	
 # sudo mv ~/zakaa_backend /var/www/
 
 echo "5.2 Installing virtualenvironemnt ..."
