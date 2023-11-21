@@ -14,4 +14,4 @@ curl https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/inst
 
 ## This script will install Zakaa Transfer Backend automatically
 ## you can review the log through this file:
-## tail -f ~/install_transfer.log
+## tail -f $HOME/install_transfer.log
