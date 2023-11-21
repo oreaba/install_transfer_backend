@@ -1,9 +1,10 @@
 ./1_update_system.sh
 ./2_install_python.sh
 ./3_install_postgres.sh
-./4_clone_project.sh
-./5_run_project.sh
-./6_install_gateway.sh
-./7_install_webserver.sh
-./8_add_webite.sh
-./9_install_supervisor.sh          
+./4_setup_ssh.sh
+./5_clone_project.sh
+./6_run_project.sh
+./7_install_gateway.sh
+./8_install_webserver.sh
+./9_add_webite.sh
+./10_install_supervisor.sh          
