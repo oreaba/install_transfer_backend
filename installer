@@ -6,8 +6,10 @@
 
 set -e
 # capture both stdout and stderr in a log file for later analysis and debugging
-exec > >(tee ~/install_transfer.log|logger -t install-transfer -s 2>/dev/console) 2>&1
+# exec > >(tee ~/install_transfer.log|logger -t install-transfer -s 2>/dev/console) 2>&1
 # exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+exec > >(tee /var/log/install_transfer.log | logger -t install-transfer -s) 2>&1
+
 yum -y install wget unzip
 cd ~
 wget https://github.com/oreaba/install_transfer_backend/archive/main.zip 
