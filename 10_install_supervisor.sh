@@ -1,7 +1,7 @@
 #!/bin/bash
 # read -p "step 10"
 
-echo "1. Installing Supervisor ..."
+echo "10.1. Installing Supervisor ..."
 
 sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm		
 sudo yum info supervisor
@@ -18,7 +18,7 @@ sudo systemctl start supervisord
 sudo systemctl status supervisord
 
 
-echo "2. Configuring Supervisor at localhost:9001..."
+echo "10.2 Configuring Supervisor at localhost:9001..."
 #"/etc/supervisord.conf" 
 CONFIGURATION="
 [inet_http_server]
@@ -40,7 +40,7 @@ stderr_logfile = /var/log/zakaa.error.log
 echo "$CONFIGURATION" | sudo tee /etc/supervisord.d/transfer_backend.ini > /dev/null
 
 # restart super visor and run application
-echo "3. Restarting supervisor & running the gunicorn app"
+echo "10.3 Restarting supervisor & running the gunicorn app"
 
 sudo supervisorctl reread
 sudo supervisorctl reload
