@@ -9,12 +9,13 @@ echo "6.1 Installing virtual  environemnt ..."
 pip3 install virtualenv
 
 echo "6.2 Activating virtual environment ..."
+
 cd /var/www/zakaa_backend/
 virtualenv .venv && source .venv/bin/activate
 which python
 
 echo "6.3 Installing Project Dependencies ..."
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 
 echo "6.4 setting project settings and environment variables [.env] ..."
 # copy the environment variable file:
