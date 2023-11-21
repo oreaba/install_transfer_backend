@@ -2,11 +2,10 @@
 
 ## This script will install Zakaa Transfer Backend automatically
 ## you can review the log through this file:
-## tail -f /var/log/install_transfer.log
+## tail -f ~/install_transfer.log
 
 set -e
-exec > >(tee /var/log/install_transfer.log | logger -t install-transfer -s) 2>&1
-
+exec > >(tee ~/install_transfer.log | logger -t install-transfer -s) 2>&1
 yum -y install wget unzip
 cd ~
 wget https://github.com/oreaba/install_transfer_backend/archive/main.zip 
