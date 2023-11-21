@@ -6,7 +6,6 @@
 
 #!/bin/bash
 mkdir -p /var/log/
-mkdir log
 # capture both stdout and stderr in a log file for later analysis and debugging
 exec > >(tee /var/log/install_transfer.log|logger -t install-transfer -s 2>/dev/console) 2>&1
 cd ~
