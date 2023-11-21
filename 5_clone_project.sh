@@ -3,7 +3,7 @@
 
 echo "5.1 Cloning the project from bitbucket repository ..."
 BITBUCKET_REPO="git@bitbucket.org:diamond-professional/zakaa_backend.git"
-TARGET_DIRECTORY="/var/www/"
+TARGET_DIRECTORY="/var/www/zakaa_backend/"
 
 # Create the target directory if it doesn't exist
 sudo mkdir -p "$TARGET_DIRECTORY"
