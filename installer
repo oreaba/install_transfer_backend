@@ -8,9 +8,9 @@ unzip main.zip
 mv install_transfer_backend-main transfer_installer
 cd transfer_installer
 sudo chmod +x *.*
-./1_update_system.sh
-./2_install_python.sh
-./3_install_postgres.sh
+# ./1_update_system.sh
+# ./2_install_python.sh
+# ./3_install_postgres.sh
 ./4_setup_ssh.sh
 ./5_clone_project.sh
 ./6_run_project.sh
