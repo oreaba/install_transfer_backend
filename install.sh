@@ -5,10 +5,11 @@
 ## tail -f /var/log/install_transfer.log
 
 #!/bin/bash
-mkdir -p /var/log/
+# mkdir -p /var/log/
 # capture both stdout and stderr in a log file for later analysis and debugging
 exec > >(tee /var/log/install_transfer.log|logger -t install-transfer -s 2>/dev/console) 2>&1
 yum -y install wget unzip
+cd ~
 wget https://github.com/oreaba/install_transfer_backend/archive/main.zip 
 unzip main.zip
 mv install_transfer_backend-main install_transfer
