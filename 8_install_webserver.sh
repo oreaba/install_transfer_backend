@@ -1,7 +1,7 @@
 #!/bin/bash
 # read -p "step 8"
 
-echo "installing nginx ..."
+echo "8.1 Installing Web Server: nginx ..."
 # install & configure nginx — a professional web server to interface with the outside world
 # install from source:
 sudo yum install pcre pcre-devel openssl-devel perl gcc make -y
@@ -27,7 +27,7 @@ sudo make install
 sudo mkdir /etc/nginx/sites-available
 sudo mkdir /etc/nginx/sites-enabled
 
-
+echo "8.2 Adding the Web Server to the system services ..."
 # Define the configuration
 CONFIGURATION="[Unit]
 Description=nginx - high performance web server
@@ -49,9 +49,9 @@ WantedBy=multi-user.target"
 # Create or overwrite the nginx.service file
 echo "$CONFIGURATION" | sudo tee /usr/lib/systemd/system/nginx.service > /dev/null
 
+echo "8.3 Restarting the Web Server ..."
 # Reload systemd to pick up the new service file
 sudo systemctl daemon-reload
-
 sudo systemctl start nginx.service
 sudo systemctl enable nginx.service
 sudo systemctl status nginx

@@ -5,9 +5,9 @@ mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 cd ~/.ssh/
 eval "$(ssh-agent -s)"
-ssh-keygen -t rsa -b 4096 -f -C "mohamed.hamdy@diamond-dpc.com" -f transfer_ssh_key_test -N ""
+ssh-keygen -t rsa -b 4096 -C "mohamed.hamdy@diamond-dpc.com" -f transfer_ssh_key -N ""
 eval "$(ssh-agent)"
-ssh-add ~/.ssh/transfer_ssh_key_test
+ssh-add ~/.ssh/transfer_ssh_key
 
 
 echo "4.2 Add SSH public key to Bitbucket using the API ..."
@@ -16,7 +16,7 @@ BITBUCKET_USERNAME="moreaba"
 BITBUCKET_APP_PASSWORD="ATBB8d7twGyuLHMDHKfrfNhHjPvv9933B622"
 
 # Add public key to Bitbucket using the API
-PUBLIC_KEY=$(cat ~/.ssh/transfer_ssh_key_test.pub)
+PUBLIC_KEY=$(cat ~/.ssh/transfer_ssh_key.pub)
 curl -u $BITBUCKET_USERNAME:$BITBUCKET_APP_PASSWORD \
      -X POST \
      -H "Content-Type: application/json" \

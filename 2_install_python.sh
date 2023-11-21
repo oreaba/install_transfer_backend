@@ -18,3 +18,14 @@ which python3.9
 sudo ln -s /usr/local/bin/python3.9 /usr/local/bin/python3
 sudo ln -s /usr/local/bin/pip3.9 /usr/local/bin/pip3
 python3 --version
+
+# # Alternative Solution:
+# sudo yum install -y patch ncurses-devel sqlite-devel readline-devel xz-devel
+# curl https://pyenv.run | bash
+# echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
+# echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+# echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+# source ~/.bashrc
+# pyenv install 3.9.5
+# which python3
+# #~/.pyenv/shims/python3
