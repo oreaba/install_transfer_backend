@@ -1,6 +1,6 @@
 #!/bin/bash
 # read -p "step 5"
-sudo yum -y install git nano wget
+
 
 echo "5.1 Cloning the project from bitbucket repository ..."
 BITBUCKET_REPO="git@bitbucket.org:diamond-professional/zakaa_backend.git"

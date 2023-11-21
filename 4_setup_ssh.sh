@@ -1,4 +1,6 @@
 #!/bin/bash
+whoami # temp
+sudo yum -y install git nano wget # temp
 
 echo "4.1 Generating SSH public and private key..."
 mkdir -p ~/.ssh
@@ -23,3 +25,4 @@ curl -u $BITBUCKET_USERNAME:$BITBUCKET_APP_PASSWORD \
      https://api.bitbucket.org/2.0/users/"$BITBUCKET_USERNAME"/ssh-keys
 cd ~
 git clone git@bitbucket.org:diamond-professional/zakaa_backend.git
+whoami
