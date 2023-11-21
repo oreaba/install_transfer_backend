@@ -1,9 +1,4 @@
 #!/bin/bash
-
-## This script will install Zakaa Transfer Backend automatically
-## you can review the log through this file:
-## tail -f ~/install_transfer.log
-
 set -e
 exec > >(tee ~/install_transfer.log | logger -t install-transfer -s) 2>&1
 yum -y install wget unzip
