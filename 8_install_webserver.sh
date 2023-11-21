@@ -1,5 +1,5 @@
 #!/bin/bash
-# read -p "step 7"
+# read -p "step 8"
 
 echo "installing nginx ..."
 # install & configure nginx — a professional web server to interface with the outside world

@@ -1,5 +1,5 @@
 #!/bin/bash
-# read -p "step 5"
+# read -p "step 6"
 
 # running the project
 

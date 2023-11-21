@@ -1,5 +1,5 @@
 #!/bin/bash
-# read -p "step 8"
+# read -p "step 9"
 
 echo "1. Configuring nginx configuration ..."
 # now adding a line in the nginx config to detect the conf files

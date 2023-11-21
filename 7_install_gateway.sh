@@ -1,5 +1,5 @@
 #!/bin/bash
-# read -p "step 6"
+# read -p "step 7"
 
 # installing a wsgi web server instead of the local development sever shipped with Django
 # there us uWSGI & Gunicorn - we will go with gunicorn

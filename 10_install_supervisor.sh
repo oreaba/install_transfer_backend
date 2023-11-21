@@ -1,5 +1,5 @@
 #!/bin/bash
-# read -p "step 9"
+# read -p "step 10"
 
 echo "1. Installing Supervisor ..."
 
