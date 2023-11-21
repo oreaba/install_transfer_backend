@@ -9,5 +9,6 @@ TARGET_DIRECTORY="/var/www/zakaa_backend/"
 sudo mkdir -p "$TARGET_DIRECTORY"
 
 # Clone the repository into the target directory
-git clone "$BITBUCKET_REPO" "$TARGET_DIRECTORY" # do not run this using sudo to be the owner	
-# sudo mv ~/zakaa_backend /var/www/
+git clone git@bitbucket.org:diamond-professional/zakaa_backend.git
+# "$BITBUCKET_REPO" #"$TARGET_DIRECTORY" # do not run this using sudo to be the owner	
+sudo mv ~/zakaa_backend /var/www/
