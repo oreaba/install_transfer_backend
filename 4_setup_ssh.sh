@@ -4,9 +4,8 @@ echo "4.1 Generating SSH public and private key..."
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 cd ~/.ssh/
-eval "$(ssh-agent -s)"
 ssh-keygen -t rsa -b 4096 -C "mohamed.hamdy@diamond-dpc.com" -f transfer_ssh_key -N ""
-eval "$(ssh-agent)"
+eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/transfer_ssh_key
 
 
@@ -22,5 +21,5 @@ curl -u $BITBUCKET_USERNAME:$BITBUCKET_APP_PASSWORD \
      -H "Content-Type: application/json" \
      -d '{"key": "'"$PUBLIC_KEY"'", "label": "EC2 Instance RHEL 7.9"}' \
      https://api.bitbucket.org/2.0/users/"$BITBUCKET_USERNAME"/ssh-keys
-
+cd ~
 git clone git@bitbucket.org:diamond-professional/zakaa_backend.git
