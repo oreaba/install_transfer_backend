@@ -12,5 +12,6 @@ yum -y install wget unzip
 wget https://github.com/oreaba/install_transfer_backend/archive/main.zip 
 unzip main.zip
 mv install_transfer_backend-main install_transfer
-sudo chmod +x install_transfer/*.*
-./install_transfer/install.sh
+cd install_transfer
+sudo chmod +x *.*
+./install.sh
