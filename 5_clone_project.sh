@@ -17,10 +17,3 @@ BITBUCKET_REPO="git@bitbucket.org:diamond-professional/zakaa_backend.git"
 #GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" sudo git clone git@bitbucket.org:diamond-professional/zakaa_backend.git /var/www/zakaa_backend
 # ssh-keyscan bitbucket.org >> ~/.ssh/known_hosts
 # ssh-keyscan git@bitbucket.org:diamond-professional/zakaa_backend.git >> ~/.ssh/known_hosts
-whoami
-pwd
-ssh-add -l
-cd /opt/
-ssh -o StrictHostKeyChecking=no -T git@bitbucket.org
-git clone git@bitbucket.org:diamond-professional/zakaa_backend.git
-whoami
