@@ -7,9 +7,9 @@ mkdir -p /root/.ssh
 chmod 700 /root/.ssh
 cd /root/.ssh/
 ssh-keygen -t rsa -b 4096 -C "mohamed.hamdy@diamond-dpc.com" -f transfer_ssh_key -N ""
-chmod 600 root/.ssh/transfer_ssh_key
+chmod 600 /root/.ssh/transfer_ssh_key
 eval "$(ssh-agent -s)"
-ssh-add root/.ssh/transfer_ssh_key
+ssh-add /root/.ssh/transfer_ssh_key
 ssh-add -l
 
 echo "4.2 Add SSH public key to Bitbucket using the API ..."
