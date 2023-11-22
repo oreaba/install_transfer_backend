@@ -7,9 +7,10 @@ mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 cd ~/.ssh/
 ssh-keygen -t rsa -b 4096 -C "mohamed.hamdy@diamond-dpc.com" -f transfer_ssh_key -N ""
+chmod 600 ~/.ssh/transfer_ssh_key
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/transfer_ssh_key
-
+ssh-add -l
 
 echo "4.2 Add SSH public key to Bitbucket using the API ..."
 #BITBUCKET_REPO="git@bitbucket.org:diamond-professional/zakaa_backend.git"
@@ -23,6 +24,9 @@ curl -u $BITBUCKET_USERNAME:$BITBUCKET_APP_PASSWORD \
      -H "Content-Type: application/json" \
      -d '{"key": "'"$PUBLIC_KEY"'", "label": "EC2 Instance RHEL 7.9"}' \
      https://api.bitbucket.org/2.0/users/"$BITBUCKET_USERNAME"/ssh-keys
-cd ~
+whoami
+pwd
+ssh-add -l
+cd /opt/
 git clone git@bitbucket.org:diamond-professional/zakaa_backend.git
 whoami
