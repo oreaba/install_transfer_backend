@@ -3,9 +3,9 @@
 
 echo "10.1. Installing Supervisor ..."
 
-sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm		
-sudo yum info supervisor
-sudo yum install -y supervisor
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm		
+yum info supervisor
+yum install -y supervisor
 supervisord --version				# 3.4.0
 
 
@@ -13,9 +13,9 @@ which supervisord
 #/usr/bin/supervisord
 which supervisorctl
 #/usr/bin/supervisorctl
-sudo systemctl enable supervisord
-sudo systemctl start supervisord
-sudo systemctl status supervisord
+systemctl enable supervisord
+systemctl start supervisord
+systemctl status supervisord
 
 
 echo "10.2 Configuring Supervisor at localhost:9001..."
@@ -42,9 +42,9 @@ echo "$CONFIGURATION" | sudo tee /etc/supervisord.d/transfer_backend.ini > /dev/
 # restart super visor and run application
 echo "10.3 Restarting supervisor & running the gunicorn app"
 
-sudo supervisorctl reread
-sudo supervisorctl reload
-sudo supervisorctl restart  all
+supervisorctl reread
+supervisorctl reload
+supervisorctl restart  all
 # sudo supervisorctl restart transfer_backend
 
 # transfer_backend                    RUNNING   pid 1874, uptime 0:00:20
@@ -54,4 +54,4 @@ curl localhost:8000			# shows Django app successfully
 curl localhost:9001			# shows supervisor successfully 
 echo ""
 echo "Finished."
-sudo supervisorctl status
+supervisorctl status

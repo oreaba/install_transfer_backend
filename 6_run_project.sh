@@ -10,7 +10,7 @@ pip3 install virtualenv
 
 echo "6.2 Activating virtual environment ..."
 
-cd /var/www/zakaa_backend/
+cd /opt/zakaa_backend/
 virtualenv .venv && source .venv/bin/activate
 which python
 
@@ -19,8 +19,8 @@ pip install -r requirements.txt
 
 echo "6.4 setting project settings and environment variables [.env] ..."
 # copy the environment variable file:
-sudo cp ~/transfer_installer/env.env /var/www/zakaa_backend/.env
-cat /var/www/zakaa_backend/.env
+sudo cp /usr/src/transfer_installer/env.env /opt/zakaa_backend/.env
+cat /opt/zakaa_backend/.env
 
 
 echo "6.5 Applying Database Migrations ..."

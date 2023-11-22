@@ -8,7 +8,7 @@ LINE_TO_ADD="include /etc/nginx/sites-enabled/*.conf;"
 # Specify the nginx.conf file
 NGINX_CONF_FILE="/etc/nginx/nginx.conf"
 # Use sed to add the line after the 'http' block
-sudo sed -i '/http {/a\'"$LINE_TO_ADD" "$NGINX_CONF_FILE"
+sed -i '/http {/a\'"$LINE_TO_ADD" "$NGINX_CONF_FILE"
 
 echo "9.2 Adding the website to ngnix webserver ..."
 # configure nginx with zakaa transfer app
@@ -30,12 +30,12 @@ server {
 # writing the file 
 echo "$CONFIGURATION" | sudo tee /etc/nginx/sites-available/transfer.conf > /dev/null
 # Create a symlink of this configuration file in sites-enabled
-sudo ln -s /etc/nginx/sites-available/transfer.conf /etc/nginx/sites-enabled/
+ln -s /etc/nginx/sites-available/transfer.conf /etc/nginx/sites-enabled/
 
 echo "9.3 Restarting nginx & running the application ..."
-sudo nginx -t
-sudo systemctl reload nginx
-sudo systemctl restart nginx
+nginx -t
+systemctl reload nginx
+systemctl restart nginx
 # systemctl status nginx.service
 # run the backend application
 
