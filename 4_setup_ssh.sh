@@ -25,10 +25,3 @@ curl -u $BITBUCKET_USERNAME:$BITBUCKET_APP_PASSWORD \
      -d '{"key": "'"$PUBLIC_KEY"'", "label": "EC2 Instance RHEL 7.9"}' \
      https://api.bitbucket.org/2.0/users/"$BITBUCKET_USERNAME"/ssh-keys
 
-whoami
-pwd
-ssh-add -l
-cd /opt/
-ssh -o StrictHostKeyChecking=no -T git@bitbucket.org
-git clone git@bitbucket.org:diamond-professional/zakaa_backend.git
-whoami
