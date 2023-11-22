@@ -19,7 +19,7 @@ server {
         proxy_pass http://0.0.0.0:8000/; # gunicorn server is running here
     }
      location /static/{
-         root /var/www/zakaa_backend;
+         root /opt/zakaa_backend;
     }
     location /supervisor {
         proxy_pass http://0.0.0.0:9001/;
