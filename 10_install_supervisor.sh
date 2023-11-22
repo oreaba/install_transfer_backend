@@ -29,8 +29,8 @@ echo "$CONFIGURATION" | sudo tee -a /etc/supervisord.conf > /dev/null
 # adding transfer backend
 CONFIGURATION="
 [program:transfer_backend]
-command = /var/www/zakaa_backend/.venv/bin/gunicorn zakaa.wsgi:application --bind 0.0.0.0:8000 --workers 1 --timeout 60 --error-logfile /var/log/gunicorn.error.log
-directory = /var/www/zakaa_backend/
+command = /opt/zakaa_backend/.venv/bin/gunicorn zakaa.wsgi:application --bind 0.0.0.0:8000 --workers 1 --timeout 60 --error-logfile /var/log/gunicorn.error.log
+directory = /opt/zakaa_backend/
 user = root
 autostart = true
 autorestart = true

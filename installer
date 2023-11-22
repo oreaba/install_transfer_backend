@@ -23,5 +23,5 @@ whoami
 ./6_run_project.sh
 ./7_install_gateway.sh
 ./8_install_webserver.sh
-./9_add_webite.sh
+./9_add_website.sh
 ./10_install_supervisor.sh
