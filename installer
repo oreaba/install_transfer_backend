@@ -19,7 +19,7 @@ whoami
 # ./2_install_python.sh
 # ./3_install_postgres.sh
 ./4_setup_ssh.sh
-# ./5_clone_project.sh
+./5_clone_project.sh
 # ./6_run_project.sh
 # ./7_install_gateway.sh
 # ./8_install_webserver.sh
