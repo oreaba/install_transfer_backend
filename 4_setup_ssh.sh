@@ -28,5 +28,6 @@ whoami
 pwd
 ssh-add -l
 cd /opt/
+ssh -o StrictHostKeyChecking=no -T git@bitbucket.org
 sudo git clone git@bitbucket.org:diamond-professional/zakaa_backend.git
 whoami
