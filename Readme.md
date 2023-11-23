@@ -5,7 +5,6 @@ curl https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/inst
 ## you can review the log through this file:
 # tail -f /var/log/transfer_installer.log
 
-
 #####
 
 # BITBUCKET_REPO="git@bitbucket.org:diamond-professional/zakaa_backend.git"
