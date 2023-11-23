@@ -5,7 +5,7 @@
 echo "3.1 Installing postgres SQL server v14 ..."
 sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 sudo yum -y install postgresql14-server
-psql --version. # psql (PostgreSQL) 14.10
+psql --version # psql (PostgreSQL) 14.10
 sudo /usr/pgsql-14/bin/postgresql-14-setup initdb
 sudo systemctl enable --now postgresql-14
 systemctl status postgresql-14
