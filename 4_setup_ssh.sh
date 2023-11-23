@@ -1,16 +1,15 @@
 #!/bin/bash
 whoami # temp
-sudo yum -y install git nano wget # temp
 
 echo "4.1 Generating SSH public and private key..."
-mkdir -p /root/.ssh
-chmod 700 /root/.ssh
+sudo mkdir -p /root/.ssh
+sudo chmod 700 /root/.ssh
 cd /root/.ssh/
 ssh-keygen -t rsa -b 4096 -C "mohamed.hamdy@diamond-dpc.com" -f transfer_ssh_key -N ""
-chmod 600 /root/.ssh/transfer_ssh_key
-eval "$(ssh-agent -s)"
-ssh-add /root/.ssh/transfer_ssh_key
-ssh-add -l
+# sudo chmod 600 /root/.ssh/transfer_ssh_key
+# eval "$(ssh-agent -s)"
+# ssh-add /root/.ssh/transfer_ssh_key
+# ssh-add -l
 
 echo "4.2 Add SSH public key to Bitbucket using the API ..."
 #BITBUCKET_REPO="git@bitbucket.org:diamond-professional/zakaa_backend.git"
