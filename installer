@@ -17,9 +17,9 @@ chmod +x *.*
 ./1_update_system.sh
 ./2_install_python.sh
 ./3_install_postgres.sh
-./4_setup_ssh.sh
+./4_setup_ssh.sh > /var/log/4_clone_project.log 2>&1
 echo "helooo----------------1--------------"
-./5_clone_project.sh
+./5_clone_project.sh > /var/log/5_run_project.log 2>&1
 echo "helooo----------------2--------------"
 ./6_run_project.sh
 echo "helooo----------------3--------------"

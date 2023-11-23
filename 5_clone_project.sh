@@ -12,3 +12,4 @@ ssh -o StrictHostKeyChecking=no -T git@bitbucket.org
 echo "Fetching project."
 git clone git@bitbucket.org:diamond-professional/zakaa_backend.git
 echo "Finished Cloning."
+exit 1;

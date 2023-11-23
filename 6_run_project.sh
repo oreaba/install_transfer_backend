@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "6.1 Installing virtual  environemnt ..."
+
 pip3 install virtualenv
 
 # cd /var/www/zakaa_backend/
