@@ -1,7 +1,6 @@
 #!/bin/bash
 # read -p "step 5"
 
-
 echo "5.1 Cloning the project from bitbucket repository ..."
 eval "$(ssh-agent -s)"
 ssh-add /root/.ssh/transfer_ssh_key

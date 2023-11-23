@@ -1,9 +1,10 @@
 #!/bin/bash
+hostnamectl
+echo "Logged user:"
+whoami
 set -e
 exec > >(sudo tee /var/log/transfer_installer.log | logger -t transfer_installer -s) 2>&1
-whoami
 yum -y install wget unzip
-whoami
 TARGET_DIRECTORY="/usr/src/"
 sudo mkdir -p "$TARGET_DIRECTORY"
 cd $TARGET_DIRECTORY
@@ -13,14 +14,15 @@ mv main.zip transfer_installer.zip
 mv install_transfer_backend-main transfer_installer
 cd transfer_installer
 chmod +x *.*
-whoami
 ./1_update_system.sh
 ./2_install_python.sh
 ./3_install_postgres.sh
 ./4_setup_ssh.sh
+echo "helooo----------------1--------------"
 ./5_clone_project.sh
-echo "helooo------------------------------"
+echo "helooo----------------2--------------"
 ./6_run_project.sh
+echo "helooo----------------3--------------"
 ./7_install_gateway.sh
 ./8_install_webserver.sh
 ./9_add_website.sh
