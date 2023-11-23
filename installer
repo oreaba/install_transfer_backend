@@ -19,6 +19,7 @@ whoami
 ./3_install_postgres.sh
 ./4_setup_ssh.sh
 ./5_clone_project.sh
+echo "helooo------------------------------"
 ./6_run_project.sh
 ./7_install_gateway.sh
 ./8_install_webserver.sh
