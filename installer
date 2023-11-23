@@ -2,17 +2,17 @@
 set -e
 exec > >(sudo tee /var/log/transfer_installer.log | logger -t transfer_installer -s) 2>&1
 whoami
-sudo yum -y install wget unzip
+yum -y install wget unzip
 whoami
 TARGET_DIRECTORY="/usr/src/"
 sudo mkdir -p "$TARGET_DIRECTORY"
 cd $TARGET_DIRECTORY
-sudo wget https://github.com/oreaba/install_transfer_backend/archive/main.zip 
-sudo unzip main.zip
-sudo mv main.zip transfer_installer.zip
-sudo mv install_transfer_backend-main transfer_installer
+wget https://github.com/oreaba/install_transfer_backend/archive/main.zip 
+unzip main.zip
+mv main.zip transfer_installer.zip
+mv install_transfer_backend-main transfer_installer
 cd transfer_installer
-sudo chmod +x *.*
+chmod +x *.*
 whoami
 ./1_update_system.sh
 ./2_install_python.sh
