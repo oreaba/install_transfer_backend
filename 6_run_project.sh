@@ -1,14 +1,11 @@
 #!/bin/bash
-# read -p "step 6"
-
-# running the project
-
 echo "6.1 Installing virtual  environemnt ..."
+pip3 install virtualenv
+
 # cd /var/www/zakaa_backend/
 # ls -ld /var/www/zakaa_backend/
 
 echo "6.2 Activating virtual environment ..."
-pip3 install virtualenv
 virtualenv --version
 cd /opt/zakaa_backend/
 virtualenv .venv && source .venv/bin/activate
