@@ -2,7 +2,7 @@
 hostnamectl
 echo "Logged user:"
 whoami
-# set -e
+set -e
 exec > >(sudo tee /var/log/transfer_installer.log | logger -t transfer_installer -s) 2>&1
 yum -y install wget unzip
 TARGET_DIRECTORY="/usr/src/"
@@ -18,11 +18,8 @@ sudo chmod +x *.*
 ./2_install_python.sh
 ./3_install_postgres.sh
 ./4_setup_ssh.sh #> /var/log/4_clone_project.log 2>&1
-# echo "helooo----------------1--------------"
 ./5_clone_project.sh #> /var/log/5_clone_project.log 2>&1
-# echo "helooo----------------2--------------"
 ./6_run_project.sh #>/var/log/6_run_project.log 2>&1
-# echo "helooo----------------3--------------"
 ./7_install_gateway.sh
 ./8_install_webserver.sh
 ./9_add_website.sh
