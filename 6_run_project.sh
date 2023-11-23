@@ -6,10 +6,10 @@
 echo "6.1 Installing virtual  environemnt ..."
 # cd /var/www/zakaa_backend/
 # ls -ld /var/www/zakaa_backend/
-pip3 install virtualenv
 
 echo "6.2 Activating virtual environment ..."
-
+pip3 install virtualenv
+virtualenv --version
 cd /opt/zakaa_backend/
 virtualenv .venv && source .venv/bin/activate
 which python
