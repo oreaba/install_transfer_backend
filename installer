@@ -7,7 +7,6 @@ whoami
 TARGET_DIRECTORY="/usr/src/"
 sudo mkdir -p "$TARGET_DIRECTORY"
 cd $TARGET_DIRECTORY
-whoami
 sudo wget https://github.com/oreaba/install_transfer_backend/archive/main.zip 
 sudo unzip main.zip
 sudo mv main.zip transfer_installer.zip

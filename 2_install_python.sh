@@ -1,6 +1,6 @@
 !/bin/bash
 install python
-read -p "step 2"
+# read -p "step 2"
 
 echo "2.1 Installing Python 3.9.5 ..."
 sudo yum install -y gcc openssl-devel bzip2-devel libffi-devel zlib-devel
