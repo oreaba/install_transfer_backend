@@ -11,7 +11,8 @@ cd $TARGET_DIRECTORY
 wget https://github.com/oreaba/install_transfer_backend/archive/main.zip 
 unzip -o main.zip
 mv main.zip transfer_installer.zip
-mv install_transfer_backend-main transfer_installer
+# mv install_transfer_backend-main transfer_installer
+rsync -a install_transfer_backend-main/ transfer_installer/
 cd transfer_installer
 sudo chmod +x *.*
 ./1_update_system.sh
