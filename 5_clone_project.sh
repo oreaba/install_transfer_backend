@@ -16,6 +16,5 @@ echo "Finished Cloning."
 
 echo "Finished Cloning."
 which python3
-which python3
 python3 -m pip install virtualenv
 echo "Finished installing venv."
