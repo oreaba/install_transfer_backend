@@ -16,13 +16,13 @@ mv main.zip transfer_installer.zip
 rsync -a install_transfer_backend-main/ transfer_installer/
 cd $TARGET_DIRECTORY$PROJECT_DIRECTORY
 sudo chmod +x *.*
-source ./1_update_system.sh
-source ./2_install_python.sh
-source ./3_install_postgres.sh
-source ./4_setup_ssh.sh #> /var/log/4_clone_project.log 2>&1
-source ./5_clone_project.sh #> /var/log/5_clone_project.log 2>&1
-source ./6_run_project.sh #>/var/log/6_run_project.log 2>&1
-source ./7_install_gateway.sh
-source ./8_install_webserver.sh
-source ./9_add_website.sh
-source ./10_install_supervisor.sh
+source /usr/src/transfer_installer/1_update_system.sh
+source /usr/src/transfer_installer/2_install_python.sh
+source /usr/src/transfer_installer/3_install_postgres.sh
+source /usr/src/transfer_installer/4_setup_ssh.sh #> /var/log/4_clone_project.log 2>&1
+source /usr/src/transfer_installer/5_clone_project.sh #> /var/log/5_clone_project.log 2>&1
+source /usr/src/transfer_installer/6_run_project.sh #>/var/log/6_run_project.log 2>&1
+source /usr/src/transfer_installer/7_install_gateway.sh
+source /usr/src/transfer_installer/8_install_webserver.sh
+source /usr/src/transfer_installer/9_add_website.sh
+source /usr/src/transfer_installer/10_install_supervisor.sh
