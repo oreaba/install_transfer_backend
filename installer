@@ -2,7 +2,7 @@
 hostnamectl
 echo "Logged user:"
 whoami
-set -e
+# set -e
 exec > >(sudo tee /var/log/transfer_installer.log | logger -t transfer_installer -s) 2>&1
 yum -y install wget unzip
 TARGET_DIRECTORY="/usr/src/"
