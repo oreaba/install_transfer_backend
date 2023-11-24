@@ -5,6 +5,7 @@ echo "4.1 Generating SSH public and private key..."
 sudo mkdir -p /root/.ssh
 sudo chmod 700 /root/.ssh
 cd /root/.ssh/
+ssh-keygen -R bitbucket.org   # remove existing keys
 ssh-keygen -t rsa -b 4096 -C "mohamed.hamdy@diamond-dpc.com" -f transfer_ssh_key -N ""
 # sudo chmod 600 /root/.ssh/transfer_ssh_key
 # eval "$(ssh-agent -s)"
