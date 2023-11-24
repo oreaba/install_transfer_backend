@@ -1,5 +1,4 @@
 #!/bin/bash
-# install postgres SQL server
 # read -p "step 3"
 
 echo "3.1 Installing postgres SQL server v14 ..."

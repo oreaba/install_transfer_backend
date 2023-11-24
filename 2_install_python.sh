@@ -1,5 +1,4 @@
-!/bin/bash
-install python
+#!/bin/bash
 # read -p "step 2"
 
 echo "2.1 Installing Python 3.9.5 ..."
@@ -13,7 +12,6 @@ sudo make altinstall
 
 echo "2.2 Checking Installation ..."
 python3.9 --version
-which python3
 which python3.9
 sudo ln -s /usr/local/bin/python3.9 /usr/local/bin/python3
 sudo ln -s /usr/local/bin/pip3.9 /usr/local/bin/pip3

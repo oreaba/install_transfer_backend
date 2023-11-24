@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "6.1 Installing virtual  environemnt ..."
-python3 -m pip install virtualenv
+# python3 -m pip install virtualenv
 
 # cd /var/www/zakaa_backend/
 # ls -ld /var/www/zakaa_backend/
@@ -8,11 +8,11 @@ python3 -m pip install virtualenv
 echo "6.2 Activating virtual environment ..."
 virtualenv --version
 cd /opt/zakaa_backend/
-virtualenv .venv && source .venv/bin/activate
+# virtualenv .venv && source .venv/bin/activate
 which python
 
 echo "6.3 Installing Project Dependencies ..."
-pip install -r requirements.txt
+# pip install -r requirements.txt
 
 echo "6.4 setting project settings and environment variables [.env] ..."
 # copy the environment variable file:
