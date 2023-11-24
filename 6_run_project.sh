@@ -14,7 +14,7 @@ which python
 echo "6.3 Installing Project Dependencies ..."
 pip install -r requirements.txt
 
-echo "6.4 setting project settings and environment variables [.env] ..."
+echo "6.4 Applying project settings and environment variables [.env] ..."
 # copy the environment variable file:
 sudo cp /usr/src/transfer_installer/env.env /opt/zakaa_backend/.env
 cat /opt/zakaa_backend/.env
