@@ -2,6 +2,12 @@
 # read -p "step 2"
 
 echo "2.1 Installing Python 3.9.5 ..."
+# Check if Python 3.9 is already installed
+if command -v python3.9 &> /dev/null; then
+    echo "Python 3.9 is already installed. Skipping compilation."
+    exit 0
+fi
+
 sudo yum install -y gcc openssl-devel bzip2-devel libffi-devel zlib-devel
 cd /usr/src/
 sudo wget https://www.python.org/ftp/python/3.9.5/Python-3.9.5.tgz
