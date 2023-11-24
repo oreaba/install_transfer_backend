@@ -19,7 +19,7 @@ sudo chmod +x *.*
 ./3_install_postgres.sh
 ./4_setup_ssh.sh #> /var/log/4_clone_project.log 2>&1
 ./5_clone_project.sh #> /var/log/5_clone_project.log 2>&1
-./6_run_project.sh #>/var/log/6_run_project.log 2>&1
+sudo ./6_run_project.sh #>/var/log/6_run_project.log 2>&1
 ./7_install_gateway.sh
 ./8_install_webserver.sh
 ./9_add_website.sh
