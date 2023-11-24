@@ -16,6 +16,7 @@ else
     sudo ln -s /usr/local/bin/python3.9 /usr/local/bin/python3
     sudo ln -s /usr/local/bin/pip3.9 /usr/local/bin/pip3
     export PATH="/usr/local/bin:$PATH"
+    /usr/local/bin/python3 -m pip install --upgrade pip
     # sudo ln -s /usr/local/bin/pip3.9 /usr/bin/pip3.9
 
 fi
