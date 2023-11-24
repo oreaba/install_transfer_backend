@@ -13,3 +13,9 @@ ssh -o StrictHostKeyChecking=no -T git@bitbucket.org
 echo "Fetching project."
 git clone git@bitbucket.org:diamond-professional/zakaa_backend.git
 echo "Finished Cloning."
+
+echo "Finished Cloning."
+which python3
+which python3
+python3 -m pip install virtualenv
+echo "Finished installing venv."

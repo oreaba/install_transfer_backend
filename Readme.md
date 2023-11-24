@@ -6,7 +6,7 @@ bash /tmp/installer.sh
 ## you can review the log through this file:
 # tail -f /var/log/transfer_installer.log
 # or if you want to inspect on your local terminal:
-# ssh -i "~/.ssh/rhel_test.pem" ec2-user@ec2-3-71-84-193.eu-central-1.compute.amazonaws.com 'tail -f /var/log/transfer_installer.log'
+# ssh -i "~/.ssh/rhel_test.pem" ec2-user@ec2-3-79-185-78.eu-central-1.compute.amazonaws.com 'tail -f /var/log/transfer_installer.log'
 
 #####
 
