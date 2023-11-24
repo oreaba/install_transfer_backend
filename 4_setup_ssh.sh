@@ -24,4 +24,3 @@ curl -u $BITBUCKET_USERNAME:$BITBUCKET_APP_PASSWORD \
      -H "Content-Type: application/json" \
      -d '{"key": "'"$PUBLIC_KEY"'", "label": "EC2 Instance RHEL 7.9"}' \
      https://api.bitbucket.org/2.0/users/"$BITBUCKET_USERNAME"/ssh-keys
-
