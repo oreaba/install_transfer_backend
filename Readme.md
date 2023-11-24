@@ -1,9 +1,10 @@
 #!/bin/bash
-# curl -o /tmp/installer.sh -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/installer
-# sudo chmod +x /tmp/installer.sh
-# source ./tmp/installer.sh
+curl -o /tmp/installer.sh -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/installer
+sudo chmod +x /tmp/installer.sh
+source ./tmp/installer.sh
 
-curl https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/installer | bash
+# TODO: the blow makes the script stop at 6 - needs retesting after addping pip to path
+# curl https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/installer | bash
 
 ## This script will install Zakaa Transfer Backend automatically
 ## you can review the log through this file:
