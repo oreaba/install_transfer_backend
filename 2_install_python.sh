@@ -15,6 +15,9 @@ else
     sudo make altinstall
     sudo ln -s /usr/local/bin/python3.9 /usr/local/bin/python3
     sudo ln -s /usr/local/bin/pip3.9 /usr/local/bin/pip3
+    export PATH="/usr/local/bin:$PATH"
+    # sudo ln -s /usr/local/bin/pip3.9 /usr/bin/pip3.9
+
 fi
 
 echo "2.2 Checking Installation ..."
