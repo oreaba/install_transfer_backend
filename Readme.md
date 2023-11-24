@@ -1,7 +1,7 @@
 #!/bin/bash
 # curl -o /tmp/installer.sh -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/installer
 # sudo chmod +x /tmp/installer.sh
-# bash /tmp/installer.sh
+# source ./tmp/installer.sh
 
 curl https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/installer | bash
 
@@ -9,7 +9,7 @@ curl https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/inst
 ## you can review the log through this file:
 # tail -f /var/log/transfer_installer.log
 # or if you want to inspect on your local terminal:
-# ssh -i "~/.ssh/rhel_test.pem" ec2-user@ec2-3-79-185-78.eu-central-1.compute.amazonaws.com 'tail -f /var/log/transfer_installer.log'
+# ssh -i "~/.ssh/rhel_test.pem" ec2-user@ec2-18-193-67-252.eu-central-1.compute.amazonaws.com 'tail -f /var/log/transfer_installer.log'
 
 #####
 
