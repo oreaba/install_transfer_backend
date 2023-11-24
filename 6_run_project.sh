@@ -1,6 +1,5 @@
 #!/bin/bash
 echo "6.1 Installing virtual  environemnt ..."
-s
 python3 -m pip install virtualenv
 
 # cd /var/www/zakaa_backend/
@@ -19,7 +18,6 @@ echo "6.4 setting project settings and environment variables [.env] ..."
 # copy the environment variable file:
 sudo cp /usr/src/transfer_installer/env.env /opt/zakaa_backend/.env
 cat /opt/zakaa_backend/.env
-
 
 echo "6.5 Applying Database Migrations ..."
 python manage.py makemigrations

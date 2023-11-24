@@ -13,12 +13,12 @@ sudo make altinstall
 
 echo "2.2 Checking Installation ..."
 python3.9 --version
-which python3.9
+which python3
 which python3.9
 sudo ln -s /usr/local/bin/python3.9 /usr/local/bin/python3
 sudo ln -s /usr/local/bin/pip3.9 /usr/local/bin/pip3
 python3 --version
-
+pip3 --version
 # Alternative Solution:
 # sudo yum install -y patch ncurses-devel sqlite-devel readline-devel xz-devel
 # curl https://pyenv.run | bash
