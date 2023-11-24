@@ -6,7 +6,7 @@ sudo mkdir -p /root/.ssh
 sudo chmod 700 /root/.ssh
 cd /root/.ssh/
 ssh-keygen -R bitbucket.org   # remove existing keys
-ssh-keygen -t rsa -b 4096 -C "mohamed.hamdy@diamond-dpc.com" -f transfer_ssh_key -N ""
+ssh-keygen -f transfer_ssh_key -t rsa -b 4096 -C "mohamed.hamdy@diamond-dpc.com"  -N "" -q
 # sudo chmod 600 /root/.ssh/transfer_ssh_key
 # eval "$(ssh-agent -s)"
 # ssh-add /root/.ssh/transfer_ssh_key
