@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -o /tmp/installer.sh -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/installer
+curl -o /tmp/installer.sh https://raw.githubusercontent.com/oreaba/install_transfer_backend/main/installer
 sudo chmod +x /tmp/installer.sh
 source ./tmp/installer.sh
 
