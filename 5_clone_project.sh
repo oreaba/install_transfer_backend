@@ -16,7 +16,7 @@ Host *
   IdentityFile ~/.ssh/transfer_backend_ssh_key
 "
 echo "$CONFIGURATION" | sudo tee /root/.ssh/config > /dev/null
-# --------------------------------------------------------------
+# -------------------------------------------------------------------s
 
 cd /opt/
 # disables strict host key checking, 
