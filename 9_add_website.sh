@@ -25,6 +25,9 @@ server {
         proxy_pass http://0.0.0.0:9001/;
         proxy_redirect http://0.0.0.0:9001/ /supervisor/;
     }
+    location /approval {
+        proxy_pass http://0.0.0.0:8001/; # gunicorn server is running here
+    }
 }
 "
 # writing the file 
